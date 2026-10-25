@@ -4,7 +4,7 @@ body {
 
   background: linear-gradient(180deg, #dff3ff 0%, #eef8ff 40%, #f8f8f8 100%);
 
-  font-family: "Press Start 2P", cursive;
+  font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
 .game-panel {
@@ -23,9 +23,13 @@ body {
   backdrop-filter: blur(10px);
 }
 
+.screen-title,
+h1 {
+  color: #1f2937;
+}
+
 .screen-title {
   text-align: center;
-  color: #2f4f4f;
 
   font-family: "Press Start 2P", cursive;
   font-size: clamp(1.5rem, 3vw, 2.5rem);
@@ -331,6 +335,8 @@ body {
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  max-width: 1200px;
+  width: 100%;
 }
 
 .pokedex-left {
@@ -542,9 +548,7 @@ body {
 
 .pokemon-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .pokemon-card {
@@ -608,4 +612,10 @@ body {
 .mini-fill {
   height: 100%;
   border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+  .pokedex-shell {
+    flex-direction: column;
+  }
 }
